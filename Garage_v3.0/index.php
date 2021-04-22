@@ -28,7 +28,7 @@ $class = new Crud();
 /* Basic 'try' 'PDO' filling its choice of logic 
     depending on the type of method */
 try {
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION, PDO::ATTR_EMULATE_PREPARES, false);
 
     switch ($method) {
         case 'GET':
